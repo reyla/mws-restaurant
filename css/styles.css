@@ -111,8 +111,13 @@ nav h1 a {
     text-decoration: underline;
 }
 /* ====================== Map ====================== */
-#map {
+#map-container {
   height: 400px;
+  width: 100%;
+}
+
+#map {
+  height: 100%;
   width: 100%;
   background-color: #ccc;
 }
@@ -203,11 +208,11 @@ nav h1 a {
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
-  position: fixed;
+  height: 400px;
+  position: absolute;
   right: 0;
-  top: 80px;
-  width: 50%;
+  top: 0px;
+  width: 100%;
 }
 .inside #map {
   background-color: #ccc;
