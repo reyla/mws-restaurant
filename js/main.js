@@ -158,8 +158,10 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
 
+  const restaurantUrl = DBHelper.urlForRestaurant(restaurant);
+
   const imageLink = document.createElement('a');
-  imageLink.href = DBHelper.urlForRestaurant(restaurant);
+  imageLink.href = restaurantUrl;
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
@@ -182,9 +184,11 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('button');
   more.name = 'View Details About ' + restaurant.name;
   more.innerHTML = 'View Details';
-  more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more);
-
+  more.addEventListener('click', function() {
+    window.location.href = restaurantUrl;
+  });  
+  
   return li
 }
 
