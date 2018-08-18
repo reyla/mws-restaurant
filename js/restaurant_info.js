@@ -1,6 +1,13 @@
 let restaurant;
 var newMap;
 
+
+// home button goes home
+const home = document.getElementById('home');
+home.addEventListener('click', function() {
+  window.location.href = '/';
+});  
+
 /**
  * Initialize map as soon as the page is loaded.
  */
@@ -29,7 +36,6 @@ initMap = () => {
           'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         id: 'mapbox.streets'    
       }).addTo(newMap);
-      fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
   });
@@ -165,16 +171,6 @@ createReviewHTML = (review) => {
   li.appendChild(comments);
 
   return li;
-}
-
-/**
- * Add restaurant name to the breadcrumb navigation menu
- */
-fillBreadcrumb = (restaurant=self.restaurant) => {
-  const breadcrumb = document.getElementById('breadcrumb');
-  const li = document.createElement('li');
-  li.innerHTML = restaurant.name;
-  breadcrumb.appendChild(li);
 }
 
 /**
