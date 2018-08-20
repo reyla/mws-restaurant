@@ -87,9 +87,11 @@ nav h1 a {
 #breadcrumb {
   padding: 10px 40px 16px;
   list-style: none;
-  font-size: 17px;
-  margin: 0 auto;
-  width: 50%;
+  font-size: 18px;
+  margin: 0;
+  text-align: left;
+  align-items: start;
+  width: 100%;
 }
 
 /* Display list items side by side */
@@ -111,7 +113,8 @@ nav h1 a {
 }
 
 /* Add a color on mouse-over */
-#breadcrumb li a:hover {
+#breadcrumb li a:hover,
+#breadcrumb li a:focus {
   color: #01447e;
   text-decoration: underline;
 }
@@ -319,6 +322,7 @@ nav h1 a {
 /* Larger screen layout */
 @media (min-width: 600px) {
   
+  /* homepage */
   #restaurants-list {
     justify-content: space-between;
     flex-direction: row;
@@ -342,7 +346,8 @@ nav h1 a {
     font-size: 1em;
     padding: 2em;
   }
-
+  
+  /* details page */
   #reviews-container {
     justify-content: space-between;
     flex-direction: row;
