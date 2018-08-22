@@ -185,32 +185,42 @@ createRestaurantHTML = (restaurant) => {
 
   const restaurantUrl = DBHelper.urlForRestaurant(restaurant);
 
+  const divImage = document.createElement('div');
   const imageLink = document.createElement('a');
   imageLink.href = restaurantUrl;
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = restaurant.name;
-  li.append(imageLink);
+  li.append(divImage);
+  divImage.append(imageLink);
   imageLink.append(image);
 
+  const divName = document.createElement('div');
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
-  li.append(name);
+  divName.append(name);
+  li.append(divName);
 
+  const divHood = document.createElement('div');
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
-  li.append(neighborhood);
+  divHood.append(neighborhood);
+  li.append(divHood);
 
+  const divAddress = document.createElement('div');
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
-  li.append(address);
+  divAddress.append(address);
+  li.append(divAddress);
 
+  const divButton = document.createElement('div');
   const more = document.createElement('button');
   more.name = 'View Details About ' + restaurant.name;
   more.className = 'button-details';
   more.innerHTML = 'View Details';
-  li.append(more);
+  divButton.append(more);
+  li.append(divButton);
   more.addEventListener('click', function() {
     window.location.href = restaurantUrl;
   });  
