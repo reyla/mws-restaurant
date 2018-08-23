@@ -173,6 +173,7 @@ createRestaurantHTML = (restaurant) => {
 
   const restaurantUrl = DBHelper.urlForRestaurant(restaurant);
 
+  /* this div goes around the image */
   const divImage = document.createElement('div');
   divImage.className = 'divImage';
   const imageLink = document.createElement('a');
@@ -185,6 +186,7 @@ createRestaurantHTML = (restaurant) => {
   divImage.append(imageLink);
   imageLink.append(image);
 
+  /* this div goes around all the other text details */
   const divDetails = document.createElement('div');
   divDetails.className = 'divDetails';
   li.append(divDetails);
@@ -210,6 +212,7 @@ createRestaurantHTML = (restaurant) => {
   divAddress.append(address);
   divDetails.append(divAddress);
 
+  /* this div is just for the button */
   const divButton = document.createElement('div');
   divButton.className = 'divButton';
   const more = document.createElement('button');
@@ -238,5 +241,4 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     }
     self.markers.push(marker);
   });
-
 }
