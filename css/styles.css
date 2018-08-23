@@ -207,7 +207,7 @@ nav h1 a {
 .button-details {
   background-color: #ff4800;
   color: #fff;
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 20px;
   text-align: center;
   text-decoration: none;
@@ -321,33 +321,49 @@ nav h1 a {
 
 
 /* Medium screen layout */
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   
   /* homepage */
-  #restaurants-list {
-    flex-direction: column;
-  }
   
   #restaurants-list li {
+    flex-direction: column;
     display: flex;
-    flex: 1 2 50%;
     align-items: center;
     margin: 0 !important;
     max-width: 100%; 
     justify-content: space-between;
   }
   
-  #divImage {
+  .divImage {
     width: 50%;
-    flex: 1 2 auto;
   }
 
-  #divName,
-  #divHood,
-  #divAddress,
-  #divButton {
-    width: 25%;
-    flex: 1 2 auto;
+  .divDetails {
+    flex-direction: row;
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .divName,
+  .divHood,
+  .divAddress {
+    display: inline-flex;
+  }
+
+  .divButton {
+    
+  }
+
+  .divName h1 {
+    font-size: 18px !important;
+  }
+
+  .divHood p,
+  .divAddress p {
+    font-size: 14px;
   }
 
   .button-details {
@@ -390,9 +406,10 @@ nav h1 a {
 }
 
 /* Large screen layout */
-@media (min-width: 960px) {
+@media (min-width: 800px) {
   
-  #restaurants-list {
+  #restaurants-list li,
+  .divDetails {
     flex-direction: row;
   }
   
@@ -400,7 +417,7 @@ nav h1 a {
     flex: 0 1 auto;
   }
 
-  #divImage {
+  .divImage {
     width: 30%;
     flex: initial;
   }
@@ -410,26 +427,27 @@ nav h1 a {
     min-width: 100px !important;
   }
 
-  #divName {
-    width: 20%;
-    flex: initial;
-  }
-
-  #divName h1 {
-    text-align: left;
-  }
-
-  #divHood {
+  .divName {
     width: 15%;
     flex: initial;
   }
 
-  #divAddress {
-    width: 20%;
+  .divName h1 {
+    text-align: left;
+    font-size: 1.5em !important;
+  }
+
+  .divHood {
+    width: 15%;
+    flex: initial;
+  }
+
+  .divAddress {
+    width: 25%;
     flex: initial;
   }
   
-  #divButton {
+  .divButton {
     width: 15%;
     flex: initial;
   }
