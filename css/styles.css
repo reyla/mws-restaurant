@@ -207,8 +207,8 @@ nav h1 a {
 .button-details {
   background-color: #ff4800;
   color: #fff;
-  font-size: 1.5em;
-  margin: 20px;
+  font-size: 1em;
+  margin: 1em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -335,7 +335,7 @@ nav h1 a {
   }
   
   .divImage {
-    width: 50%;
+    width: 70%;
   }
 
   .divDetails {
@@ -353,10 +353,6 @@ nav h1 a {
     display: inline-flex;
   }
 
-  .divButton {
-    
-  }
-
   .divName h1 {
     font-size: 18px !important;
   }
@@ -365,10 +361,6 @@ nav h1 a {
   .divAddress p {
     font-size: 14px;
   }
-
-  .button-details {
-    font-size: 1em;
-  }
   
   /* details page */
 
@@ -376,26 +368,26 @@ nav h1 a {
     flex-direction: row;
     display: inline-flex;
     border: 0;
-    padding-right: 0;
+    padding: 20px 0;
   }
 
   #details-left {
     width: 50%;
-    padding: 20px 0;
+    padding: 20px 0 0 20px;
   }
 
-  #details-left img {
-    max-height: 600px;
+  .inside .restaurant-img {
+    width: 100%;
   }
 
   #details-right {
     width: 50%;
-    padding: 100px 0 0 20px;
-    font-size: 1.5em;
+    padding: 130px 0 0 20px;
   }
 
   #restaurant-hours td {
     padding: 0 10px;
+    font-size: 16px;
   }
 
   #reviews-container {
@@ -418,37 +410,41 @@ nav h1 a {
   }
 
   .divImage {
-    width: 30%;
+    width: 25%;
     flex: initial;
+  }
+
+  .divDetails {
+    width: 75%;
   }
 
   .restaurant-img {
-    max-width: 300px !important;
+    max-width: 200px !important;
     min-width: 100px !important;
   }
 
-  .divName {
-    width: 15%;
-    flex: initial;
+  .inside .restaurant-img {
+    max-width: 600px !important;
+    max-height: 600px !important;
   }
 
   .divName h1 {
     text-align: left;
-    font-size: 1.5em !important;
+    font-size: 1em !important;
   }
 
-  .divHood {
-    width: 15%;
-    flex: initial;
-  }
-
-  .divAddress {
-    width: 25%;
-    flex: initial;
+  .divDetails p {
+    font-size: 14px !important;
   }
   
-  .divButton {
-    width: 15%;
-    flex: initial;
+  .button-details {
+    width: 130px;
+    line-height: 1.5em;
+    margin: 20px;
   }
+
+  #restaurant-hours td {
+    font-size: 18px;
+  }
+
 }
