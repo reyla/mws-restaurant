@@ -216,8 +216,8 @@ createRestaurantHTML = (restaurant) => {
   const divButton = document.createElement('div');
   divButton.className = 'divButton';
   const more = document.createElement('button');
-  more.name = 'View Details About ' + restaurant.name;
   more.className = 'button-details';
+  more.setAttribute('aria-label', restaurant.name);
   more.innerHTML = 'View Details';
   divButton.append(more);
   li.append(divButton);
