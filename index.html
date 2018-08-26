@@ -21,11 +21,11 @@
 
   <main id="maincontent">
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" aria-label="Restaurant Location Map" role="widget"></div>
     </section>
     <section>
-      <div name="filter-options" id="filter-options" role="form">
-        <h2>Filter Results</h2>
+      <div name="filter-options" id="filter-options" role="form" aria-labelledby="filter-title">
+        <h2 id="filter-title">Filter Results</h2>
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
